@@ -1,0 +1,15 @@
+nx:
+  boobstrap:
+    profile: dev #dev\test\pre\prod
+    local-dev: true #本地开发，nacos的group可自定义,否则group的值等于profile
+    version: 1.8.4+
+    server.port: 18080
+    management.server.port: 19080
+    application.name: nx-sentinel
+    dev:
+      cloud:
+        namespace: nx
+        group: dev
+        server-addr: 119.23.179.163:8848
+        username: nacos
+        password: nacos

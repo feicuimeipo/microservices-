@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.nx.common.service.api.conf.feign.ReactorFeignConfig,\
+  com.nx.common.service.api.conf.feign.FeignConfig,\
+  com.nx.common.context.SpringUtils,\
+  com.nx.common.service.api.conf.ApiAutoConfiguration

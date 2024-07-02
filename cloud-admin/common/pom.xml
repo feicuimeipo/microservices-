@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.pharmcube.cloud</groupId>
+        <artifactId>pharmcube-admin</artifactId>
+        <version>0.9.9</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>admin-common</artifactId>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>admin-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>admin-api-auth</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>admin-api-user</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>${cloud.groupId}</groupId>
+            <artifactId>pharmcube-boot-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>${cloud.groupId}</groupId>
+            <artifactId>pharmcube-mybatis-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>${cloud.groupId}</groupId>
+            <artifactId>pharmcube-logging-starter</artifactId>
+            <version>${cloud.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>${cloud.groupId}</groupId>
+            <artifactId>pharmcube-api-model</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>${cloud.groupId}</groupId>
+            <artifactId>pharmcube-common-util</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>${cloud.groupId}</groupId>
+            <artifactId>pharmcube-cache-adapter</artifactId>
+        </dependency>
+
+        <!--uc-api-impl begin-->
+
+
+<!--        <dependency>-->
+<!--            <groupId>org.codehaus.groovy</groupId>-->
+<!--            <artifactId>groovy</artifactId>-->
+<!--            <version>3.0.10</version>-->
+<!--        </dependency>-->
+
+
+
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>4.0.4</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <!--uc-api-impl end-->
+
+    </dependencies>
+</project>

@@ -1,0 +1,35 @@
+nx:
+  boot:
+    profile: dev #dev\test\pre\prod
+    include: boot
+    local-dev: true
+    version: @project.version@
+    application.name: xxx-service
+    server.port: 8080
+    management.server.port: 9080
+    dev:
+      cloud:
+        namespace: nx
+        group: dev
+        #server-addr: 192.168.1.136:8848
+        #server-addr: localhost:8848
+        server-addr: 119.23.179.163:8848
+        username: nacos
+        password: nacos
+        config:
+          enabled: true
+          provider: nacos
+          prefix: nx-application
+          extension: yaml
+        discovery:
+          enabled: true
+          provider: nacos
+          feign:
+            enabled: true
+        dubbo:
+          enabled: true
+          port: 20883
+          protocol: dubbo
+          register-mode: nacos   #|direct|nacos
+          scan-base-packages: com.nx.xxx.apimpl
+

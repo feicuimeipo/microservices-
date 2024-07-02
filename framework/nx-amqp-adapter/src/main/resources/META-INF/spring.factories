@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.nx.amqp.config.NxMqRedisAutoConfiguration,\
+  com.nx.amqp.config.NxMqServiceRegistryBean

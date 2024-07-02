@@ -1,0 +1,53 @@
+######################################################################
+# Build Tools
+
+.gradle
+/doc/shell/
+!gradle/wrapper/gradle-wrapper.jar
+
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+######################################################################
+# IDE
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+doc/shell/*
+nbbuild/
+other-back/
+dist/
+!*/eiffel-xxl-job-admin/**/*/dist
+!/doc/build
+!/doc/shell
+nbdist/
+.nb-gradle/
+framework-extra/
+
+######################################################################
+# Others
+*.log
+*.xml.versionsBackup
+*.swp
+*.jar
+
+!*/build/*.java
+!*/build/*.html
+!*/build/*.xml
+
+admin-ui-bak/
+back/

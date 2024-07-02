@@ -1,0 +1,10 @@
+{
+  "@class" : "org.apereo.cas.services.CasRegisteredService",
+  "serviceId" : "^https://apereo.github.io.*",
+  "id" : 1,
+  "multifactorPolicy" : {
+    "@class" : "org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy",
+    "bypassPrincipalAttributeName": "bypassEnabled",
+    "bypassPrincipalAttributeValue": "true"
+  }
+}

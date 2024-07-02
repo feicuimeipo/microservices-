@@ -1,0 +1,13 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.nx.boot.launch.listener.Application4SmartInitializingSingleton
+
+org.springframework.context.ApplicationListener=\
+  com.nx.boot.launch.listener.Application5WebServerInitializedEventListener,\
+  com.nx.boot.launch.listener.Application1StartingEventListener,\
+  com.nx.boot.launch.listener.Application2EnvironmentPreparedEventListener,\
+  com.nx.boot.launch.listener.Application3ContextInitializedEventListener,\
+  com.nx.boot.launch.listener.Application6StartedEventListener,\
+  com.nx.boot.launch.listener.Application7ReadyEventListener,\
+  com.nx.boot.launch.listener.ApplicationEventCloseListener,\
+  com.nx.boot.launch.listener.ApplicationFailedEventListener
+  

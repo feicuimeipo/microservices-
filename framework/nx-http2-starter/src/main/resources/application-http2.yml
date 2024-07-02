@@ -1,0 +1,10 @@
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: xxx
+    key-password: xxx
+    protocol: TLSv1.2
+  http2:
+    enabled: true
+  use-forward-headers: true
