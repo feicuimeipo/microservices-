@@ -1,0 +1,16 @@
+/* 改变主题色变量 */
+//$--color-primary: #409eff;
+$--color-primary: #004198;
+$--color-secondary: #dfebfc;
+
+/* 左侧树宽度设置 */
+$--aside-width: 230px;
+/* 自定义主题色变量 */
+.primaryColor {
+  background-color: #004198;
+}
+
+//主要的一步：
+:export {
+  aside_width: $--aside-width;
+}

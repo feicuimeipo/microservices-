@@ -1,0 +1,8 @@
+minio:
+  default:
+    name: default
+    endpoint:
+    accessKey:
+    secretKey:
+    regionName: beijing
+    max-connections: 200

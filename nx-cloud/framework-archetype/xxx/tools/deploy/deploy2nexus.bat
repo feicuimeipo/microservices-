@@ -1,0 +1,1 @@
+call mvn deploy:deploy-file -DgroupId=com.alibaba.nacos -DartifactId=nacos-auth-plugin -Dversion=2.1.0 -Dpackaging=jar -Dfile=nacos-encryption-plugin-2.1.0.jar -DrepositoryId=releases -Durl=http://nexus.pharmcube.com/nexus/content/repositories/releases

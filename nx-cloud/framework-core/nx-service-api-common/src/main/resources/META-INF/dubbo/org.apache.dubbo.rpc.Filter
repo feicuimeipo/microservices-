@@ -1,0 +1,2 @@
+consumerFilter=dubbo.conf.com.nx.common.DubboConsumerFilter
+providerFilter=dubbo.conf.com.nx.common.DubboProviderFilter

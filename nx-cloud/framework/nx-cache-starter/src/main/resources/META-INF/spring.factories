@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.nx.redis.config.NxRedisDefaultAutoConfiguration,\
+  com.nx.redis.config.NxJedisProviderFactoryBean

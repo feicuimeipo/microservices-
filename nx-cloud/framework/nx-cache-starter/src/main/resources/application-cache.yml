@@ -1,0 +1,17 @@
+spring:
+  cache:
+    use2-level-cache: true
+    use1-level-cache: true
+    level1:
+      type: caffeine
+      concurrency-level: 8
+      initial-capacity: 50
+      maximum-size: 10000
+      expire-after-write: 84600 #1天
+      record-stats: false
+  redis:
+    pool:
+      max-active: 50 #连接池最大连接数（使用负值表示没有限制）
+      max-wait: -1   # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-idle: 20  # 连接池中的最大空闲连接
+      min-idle: 10  # 连接池中的最小空闲连接

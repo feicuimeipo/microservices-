@@ -1,0 +1,18 @@
+nx:
+  logging:
+    provider: slf4j
+    logPath:
+    action-logger:
+      appId: ${spring.application.name}
+      port: ${server.port}
+      env: ${spring.profile.active}
+      storageType: fileLog
+      fileLog:
+        maxFileSize: "100MB"
+        totalSizeCap: "10GB"
+        maxHistory: 30
+        charset: "UTF-8"
+      #httpApi:
+      #  postUrl:
+      #  accessToken:
+      #  secret:

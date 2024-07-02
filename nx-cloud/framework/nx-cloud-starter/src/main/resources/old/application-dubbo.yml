@@ -1,0 +1,23 @@
+dubbo:
+  scan:
+    base-packages: com.nx.**.*.api.impl
+  protocol:
+    name: dubbo
+    port: 20880
+  provider:
+    token: true
+  consumer:
+    timeout: 3000
+  registry:
+    address: spring-cloud://192.168.44.129
+  application:
+    qos-enable: false #dubbo运维服务是否开启
+
+
+spring:
+  cloud:
+    nacos:
+    discovery:
+      server-addr: 192.168.44.129:8848
+  consumer:
+    check: false #启动时是否检查依赖的服务

@@ -1,0 +1,23 @@
+nx:
+  boot:
+    profile: dev #dev\test\pre\prod
+    local-dev: true #本地开发，nacos的group可以自定义
+    version: 1.0.0
+    server.port: 18096
+    management.server.port: 19096
+    application.name: nx-gateway
+    dev:
+      cloud:
+        namespace: nx
+        group: dev  #如果不填，等于于profile
+        server-addr: 119.23.179.163:8848
+        username: nacos
+        password: nacos
+        enabled: true
+        config:
+          prefix: nx-gateway
+        dubbo:
+          port: 20883
+        sentinel:
+          server-addr: localhost:18080
+          port: 8719    #8791

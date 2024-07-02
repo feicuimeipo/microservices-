@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.pharmcube.cloud</groupId>
+    <artifactId>pharmcube-cloud</artifactId>
+    <packaging>pom</packaging>
+    <version>0.9.9</version>
+
+    <modules>
+        <module>archetype</module>
+        <module>example</module>
+        <module>framework</module>
+        <module>framework-base</module>
+        <module>pharmcube-admin</module>
+        <module>pharmcube-dashboard</module>
+        <module>pharmcube-gateway</module>
+        <module>pharmcube-sso</module>
+    </modules>
+
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Releases</name>
+            <url>http://nexus.pharmcube.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshots</name>
+            <url>http://nexus.pharmcube.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
+</project>

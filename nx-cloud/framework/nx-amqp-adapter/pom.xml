@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.nx.cloud</groupId>
+		<artifactId>nx-parent</artifactId>
+		<version>0.9.9</version>
+	</parent>
+	<artifactId>nx-amqp-adapter</artifactId>
+	<description>MQ适配器，支持各种云厂商云MQ，已经原生kafka,RocketMQ,RabbitMQ等(kafka的读取方式，可集成另外一种，这个可以自己写程序完成）minio,本地存府</description>
+
+
+	<properties>
+		<kafka.version>3.0.0</kafka.version>
+		<maven.deploy.skip>true</maven.deploy.skip>
+		<skip.checks>true</skip.checks><!--true,跳过上传-->
+		<okhttp.version>4.10.0</okhttp.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>${cloud.groupId}</groupId>
+			<artifactId>nx-common</artifactId>
+			<version>${cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>${cloud.groupId}</groupId>
+			<artifactId>nx-utils</artifactId>
+			<version>${cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>${cloud.groupId}</groupId>
+			<artifactId>nx-logging-starter</artifactId>
+			<version>${cloud.version}</version>
+		</dependency>
+
+
+		<!--第三方平台 end-->
+		<!--redis-->
+		<dependency>
+			<groupId>${cloud.groupId}</groupId>
+			<artifactId>nx-cache-starter</artifactId>
+			<version>${cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.rocketmq</groupId>
+			<artifactId>rocketmq-client</artifactId>
+			<version>4.8.0</version>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>5.9.0</version>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.version}</version>
+			<optional>true</optional>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.qcloud</groupId>
+			<artifactId>cmq-http-client</artifactId>
+			<version>1.1.0</version>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aliyun.openservices</groupId>
+			<artifactId>ons-client</artifactId>
+			<version>1.8.7.4.Final</version>
+			<optional>true</optional>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.aliyun.mns</groupId>
+			<artifactId>aliyun-sdk-mns</artifactId>
+			<version>1.1.9</version>
+			<optional>true</optional>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+		</dependency>
+		<!--第三方平台 end-->
+
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+			<version>3.4.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- httpClient end-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-system</artifactId>
+			<version>${hutool.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+	</dependencies>
+
+
+
+</project>

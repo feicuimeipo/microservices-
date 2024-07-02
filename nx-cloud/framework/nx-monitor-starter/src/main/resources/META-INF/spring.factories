@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.nx.cloud.monitor.skywalking.config.YudaoTracerAutoConfiguration,\
+  com.nx.cloud.monitor.skywalking.config.YudaoMetricsAutoConfiguration

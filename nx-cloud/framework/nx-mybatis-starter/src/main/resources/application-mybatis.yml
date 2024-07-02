@@ -1,0 +1,111 @@
+spring:
+  autoconfigure:
+    exclude:
+      - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure # 排除 Druid 的自动配置，使用 dynamic-datasource-spring-boot-starter 配置多数据源
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration # 排除积木报表带来的 MongoDB 的自动配置
+      - org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid: # Druid 【监控】相关的全局配置
+      web-stat-filter:
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+        allow: # 设置白名单，不填则允许所有访问
+        url-pattern: /druid/*
+        login-username: # 控制台管理用户名和密码
+        login-password:
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true # 慢 SQL 记录
+          slow-sql-millis: 100
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+    dynamic:
+      druid:
+        initial-size: 5 # 初始连接数
+        min-idle: 10 # 最小连接池数量
+        max-active: 20 # 最大连接池数量
+        max-wait: 600000 # 配置获取连接等待超时的时间，单位：毫秒
+        time-between-eviction-runs-millis: 60000 # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位：毫秒
+        min-evictable-idle-time-millis: 300000 # 配置一个连接在池中最小生存的时间，单位：毫秒
+        max-evictable-idle-time-millis: 900000 # 配置一个连接在池中最大生存的时间，单位：毫秒
+        validation-query: SELECT 1 FROM DUAL # 配置检测连接是否有效
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        remove-abandoned: false
+        remove-abandoned-timeout: 1800
+  sharding-sphere:
+    enabled: false
+#    datasource:
+#      names: master,slave
+#      master: # 主数据源
+#        type: ${spring.datasource.type}
+#        driver-class-name: ${spring.datasource.dynamic.datasource.master.driver-class-name}
+#        url: ${spring.datasource.dynamic.datasource.master.url}
+#        username: ${spring.datasource.dynamic.datasource.master.username}
+#        password: ${spring.datasource.dynamic.datasource.master.password}
+#      # 从数据源
+#      slave:
+#        type: ${spring.datasource.type}
+#        driver-class-name: ${spring.datasource.dynamic.datasource.slave.driver-class-name}
+#        url: ${spring.datasource.dynamic.datasource.slave.url}
+#        username: ${spring.datasource.dynamic.datasource.slave.username}
+#        password: ${spring.datasource.dynamic.datasource.slave.password}
+#    props:
+#      sql:
+#        show: true
+#    sharding:
+#      props:
+#        sql.show: true
+#    masterslave:
+#      load-balance-algorithm-type: round_robin        # 读写分离配置
+#      name: dataSource                                # 最终的数据源名称
+#      master-data-source-name: master                 # 主库数据源名称
+#      slave-data-source-names: slave                  # 从库数据源名称列表，多个逗号分隔
+
+
+jasypt:
+  encryptor:
+    password: nianxi # 加解密的秘钥
+
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    cache-enabled: false
+    use-generated-keys: true
+    default-executor-type: simple
+    call-setters-on-nulls: true #返回Map集合时，针对空值字段强行返回
+  mapper-locations: classpath:mapper/*/*Mapper.xml
+  typeAliasesPackage: com.nx.**.entity
+
+# mybatis
+mybatis-plus:
+  mapper-locations: classpath:mapper/*/*Mapper.xml,mapper/*Mapper.xml
+  typeAliasesPackage: com.nx.**.entity
+  global-config:
+    refresh: ${spring.profiles.active}   #刷新mapper 调试神器
+    banner: false  #关闭MP3.0自带的banner
+    db-config:
+      id-type: AUTO #主键类型(AUTO) 0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+      column-underline: true     #驼峰下划线转换
+      logic-delete-value: 1      # 逻辑删除配置，逻辑删除全局值（1表示已删除，Mybatis Plus的默认配置）
+      logic-not-delete-value: 0  # 逻辑未删除全局值（0表示未删除，Mybatis Plus的默认配置）
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    default-fetch-size: 100
+    default-statement-timeout: 3000
+
+
+#PageHelper-分页插件
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true
+  params: count=countSql

@@ -1,0 +1,34 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' #gateway
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+    nacos-discovery:
+      enabled: true
+    gateway:
+      enabled: true
+    prometheus:
+      enabled: true
+    sentinel:
+      enabled: true
+    env:
+      enabled: true
+    logfile:
+      enabled: true
+  health:
+    elasticsearch.enabled: true
+    db.enabled: false
+    defaults:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    export:
+      prometheus:
+        enabled: true
+
+
