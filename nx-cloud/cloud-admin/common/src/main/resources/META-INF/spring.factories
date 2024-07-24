@@ -1,5 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.hotent.base.AdminCommonAutoConfiguration,\
-    com.hotent.auth.AuthAutoConfiguration,\
-    com.hotent.auth.aop.FieldAuthAspect,\
-    com.hotent.ucapi.base.conf.AuthConfig

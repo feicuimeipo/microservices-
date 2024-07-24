@@ -1,8 +1,0 @@
-<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1651624497332" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3567" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><defs><style type="text/css">@font-face { font-family: feedback-iconfont; src: url("//at.alicdn.com/t/font_1031158_u69w8yhxdu.woff2?t=1630033759944") format("woff2"), url("//at.alicdn.com/t/font_1031158_u69w8yhxdu.woff?t=1630033759944") format("woff"), url("//at.alicdn.com/t/font_1031158_u69w8yhxdu.ttf?t=1630033759944") format("truetype"); }
-</style></defs>
-<path d="M992 512A480 480 0 1 1 512 32a480 480 0 0 1 480 480zM512 96a416 416 0 1 0 416 416A416 416 0 0 0 512 96z" fill="#707070" p-id="3568" data-spm-anchor-id="a313x.7781069.0.i7" class="selected"></path>
-<!--
-<path d="M672 352v64H352v-64h320z m0 192v64H352v-64h320zM288 352h64v288H288v-288z m384 0h64v288h-64v-288z" fill="#707070" p-id="3569" data-spm-anchor-id="a313x.7781069.0.i8" class="selected"></path>
-<path d="M480 224h64v576h-64z" fill="#707070" p-id="3570" data-spm-anchor-id="a313x.7781069.0.i9" class="selected"></path>
--->
-</svg>

@@ -1,6 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.nx.cloud.protection.idempotent.config.NxIdeProtectionAutoConfiguration,\
-  com.nx.cloud.protection.lock4j.config.NxLock4jConfiguration,\
-  com.nx.cloud.protection.sentinel.SentinelAspectConfiguration,\
-  com.nx.cloud.protection.sentinel.SentinelWebFluxConfiguration,\
-  com.nx.cloud.protection.sentinel.SentinelWebConfiguration

@@ -1,4 +1,0 @@
-{
-  "/auth/*": "/auth/$1",
-  "/engine/*": "/engine/$1"
-}

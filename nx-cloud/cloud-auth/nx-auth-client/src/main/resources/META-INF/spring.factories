@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.nx.auth.conf.AuthApiConfigure,\
-  com.nx.auth.conf.WebSecurityConfig,\
-  com.nx.auth.conf.ScriptEngineConfig
